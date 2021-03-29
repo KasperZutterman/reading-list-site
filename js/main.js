@@ -39,6 +39,13 @@ fetch("https://pocket.data.kasperzutterman.com/pocket.json?sql=select%20given_ur
                 card.appendChild(time_to_read)
             }
 
+            if (result[i].top_image_url != null) {
+                top_image_url = document.createElement('img');
+                top_image_url.className = "card_image"
+                top_image_url.setAttribute('src', result[i].top_image_url);
+                card.appendChild(top_image_url)
+            }
+
             //appendChildElement.innerHTML = result[i].given_title
         }
     })
